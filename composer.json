@@ -1,0 +1,22 @@
+{
+    "name": "Amasty/VictoriaModule",
+    "description": "description",
+    "type": "magento2-module",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "appvictorica",
+            "email": "email@example.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Amasty\\VictoriaModule\\": ""
+        }
+    }
+}
