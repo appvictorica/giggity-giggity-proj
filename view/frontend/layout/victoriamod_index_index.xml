@@ -35,23 +35,6 @@
         </referenceContainer>
 
 
-<!--        <referenceContainer name="content">-->
-
-
-<!--            <container name="victoriamod.main" htmlTag="div" htmlClass="main-class">-->
-<!--                <block class="Amasty\VictoriaModule\Block\Index"-->
-<!--                       name="victoriamod.index.index"-->
-<!--                       template="Amasty_VictoriaModule::form-page.phtml">-->
-
-<!--                    <block class="Magento\Framework\View\Element\Template"-->
-<!--                           name="timer"-->
-<!--                           template="Amasty_VictoriaModule::timer-page.phtml"/>-->
-<!--                </block>-->
-
-<!--            </container>-->
-
-
-<!--        </referenceContainer>-->
     </body>
 
 </page>
