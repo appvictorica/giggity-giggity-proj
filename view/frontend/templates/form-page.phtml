@@ -1,0 +1,12 @@
+<?php
+/** @var Amasty\VictoriaModule\Block\Index $block */
+?>
+
+<div>
+    <form action="">
+        <p class="<?=$block->getData("input_class_sku") ?>">Sku: <input type="text" name="sku"></p>
+        <p class="<?=$block->getData("input_class_qty") ?>">Qty: <input type="number" name="qty"></p>
+        <div><?=$block->getChildHtml('amasty_victoriamod.timer'); ?></div>
+        <input type="submit" class="<?=$block->getData("input_class_submit") ?>">
+    </form>
+</div>
