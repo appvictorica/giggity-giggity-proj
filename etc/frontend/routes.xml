@@ -8,7 +8,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
         <route id="victoriamod" frontName="victoriamod">
-            <module name="Amasty_VictoriaModule" />
+            <module name="Amasty_VictoriaModule"/>
         </route>
     </router>
 </config>

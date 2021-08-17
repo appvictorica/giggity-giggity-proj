@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-    <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       layout="1column"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
@@ -10,25 +10,25 @@
     <body>
         <referenceContainer name="content">
             <container name="amasty_victoriamod.main" htmlTag="div" htmlClass="main-class">
-<!--                <block class="Amasty\VictoriaModule\Block\Index"-->
-<!--                       name="victoriamod_index_index"-->
-<!--                       template="Amasty_VictoriaModule::index.phtml" />-->
+
                 <block class="Amasty\VictoriaModule\Block\Index"
                        name="amasty_victoriamod.hello"
-                       template="Amasty_VictoriaModule::hello-page.phtml" />
+                       template="Amasty_VictoriaModule::hello-page.phtml"/>
 
                 <block class="Amasty\VictoriaModule\Block\Index"
                        name="amasty_victoriamod.form"
-                       template="Amasty_VictoriaModule::form-page.phtml" >
+                       template="Amasty_VictoriaModule::form-page.phtml">
                     <arguments>
                         <argument name="input_class_sku" xsi:type="string">input_class_sku</argument>
                         <argument name="input_class_qty" xsi:type="string">input_class_qty</argument>
                         <argument name="input_class_submit" xsi:type="string">input_class_submit</argument>
+
+                        <argument name="hide_element" xsi:type="string">hide_element</argument>
                     </arguments>
 
                     <block class="Amasty\VictoriaModule\Block\Index"
                            name="amasty_victoriamod.timer"
-                           template="Amasty_VictoriaModule::timer-page.phtml" />
+                           template="Amasty_VictoriaModule::timer-page.phtml"/>
                 </block>
 
             </container>

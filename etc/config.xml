@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <default>
+        <victoriamod_config>
+            <general>
+                <module_enabled>1</module_enabled>
+                <greeting_text>Основная информация доступна на devdocs.magento.com. Настройки для модуля можно добавить через файл etc/adminhtml/system.xml. С помощь него мы можем вывести в панели администратора новую табу, секцию, добавить поля для наших настроек. Через файл etc/config.xml можно задать значения своих настроек по умолчанию. Для того, чтобы получить настройку в своём коде, используется магентовский класс Magento\Framework\App\Config Хорошей практикой считается создание в модуле отдельного класса для работы с настройками- ConfigProvider.</greeting_text>
+            </general>
+            <qty_general>
+                <qty_hide>1</qty_hide>
+                <qty_default>1</qty_default>
+            </qty_general>
+        </victoriamod_config>
+    </default>
+</config>

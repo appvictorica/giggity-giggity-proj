@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Amasty_VictoriaModule" translate="label" sortOrder="10">
+            <label>Amasty Victoria Module</label>
+        </tab>
+
+        <section id="victoriamod_config" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Victoria Module Config</label>
+            <tab>Amasty_VictoriaModule</tab>
+            <resource>Amasty_VictoriaModule::config</resource>
+            <group id="general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="module_enabled" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Module Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="greeting_text" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Greeting Text</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="module_enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="qty_general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Qty Configuration</label>
+                <field id="qty_hide" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is Qty field Visible</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="qty_default" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Qty</label>
+                    <validate>validate-zero-or-greater</validate>
+                    <depends>
+                        <field id="qty_hide">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

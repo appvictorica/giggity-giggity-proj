@@ -15,6 +15,10 @@
 }
 
 .input_class_submit:hover {
-    background: #acacac;
+    background: #a29c94;
     cursor:pointer;
+}
+
+.hide_element {
+    display: none;
 }

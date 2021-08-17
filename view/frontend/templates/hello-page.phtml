@@ -1,7 +1,6 @@
 <?
-helloMess();
-
-function helloMess() {
-    echo "Hello World";
-}
+/** @var Amasty\VictoriaModule\Block\Index $block */
 ?>
+
+<p><?= $block->helloMessage(); ?></p>
+<p><?= $block->greetingTextFromSettings()?></p>

@@ -3,10 +3,19 @@
 ?>
 
 <div>
-    <form action="">
-        <p class="<?=$block->getData("input_class_sku") ?>">Sku: <input type="text" name="sku"></p>
-        <p class="<?=$block->getData("input_class_qty") ?>">Qty: <input type="number" name="qty"></p>
+    <form action="<?= $block->getUrl('victoriamod/index/action')?>" method="get" data-mage-init='{"validation":{}}'>
+        <div class="<?=$block->getData("input_class_sku"); ?>">
+                <label for="sku">Sku:</label>
+                <input type="text" name="sku" id="sku" data-validate='{"required":true}'>
+        </div>
+        <div class="<?= $block->setVisibleElement(); ?> ">
+                <label for="qty">Qty:</label>
+                <input type="number" name="qty" id="qty" value="<?=$block->getQtyDefault() ?>"
+                       data-validate='{"required":true, "min":1}'>
+        </div>
+
         <div><?=$block->getChildHtml('amasty_victoriamod.timer'); ?></div>
-        <input type="submit" class="<?=$block->getData("input_class_submit") ?>">
+        <button class="<?=$block->getData("input_class_submit"); ?>">Submit</button>
     </form>
+
 </div>
