@@ -1,1 +1,18 @@
-<p>Здесь будет таймер, который я сделаю в другом задании</p>
+<script type="text/x-magento-init">
+    {
+    "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "displayTimer": {
+                        "component": "Amasty_VictoriaModule/js/timer",
+                        "template": "Amasty_VictoriaModule/timer"
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<div data-bind="scope: 'displayTimer'">
+    <!-- ko template: getTemplate() --> <!-- /ko -->
+</div>

@@ -1,0 +1,15 @@
+
+
+<div>
+    <label for="sku">Sku:</label>
+    <input type="text" name="sku" id="sku" data-validate='{"required":true}' data-bind="textInput: searchSku">
+    <div class="autocomplete-list">
+        <ul data-bind="foreach: searchResult">
+
+            <li>
+                <div data-bind="text: $data.productSku"></div>
+                <div data-bind="text: $data.productName"></div>
+            </li>
+        </ul>
+    </div>
+</div>

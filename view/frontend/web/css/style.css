@@ -22,3 +22,12 @@
 .hide_element {
     display: none;
 }
+
+.timer_class {
+    padding: 10px;
+    margin: 10px;
+}
+
+.timer_class div {
+    font-size: large;
+}

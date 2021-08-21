@@ -22,8 +22,8 @@
                         <argument name="input_class_sku" xsi:type="string">input_class_sku</argument>
                         <argument name="input_class_qty" xsi:type="string">input_class_qty</argument>
                         <argument name="input_class_submit" xsi:type="string">input_class_submit</argument>
-
                         <argument name="hide_element" xsi:type="string">hide_element</argument>
+                        <argument name="timer_class" xsi:type="string">timer_class</argument>
                     </arguments>
 
                     <block class="Amasty\VictoriaModule\Block\Index"

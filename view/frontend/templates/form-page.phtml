@@ -3,19 +3,37 @@
 ?>
 
 <div>
-    <form action="<?= $block->getUrl('victoriamod/index/action')?>" method="get" data-mage-init='{"validation":{}}'>
-        <div class="<?=$block->getData("input_class_sku"); ?>">
-                <label for="sku">Sku:</label>
-                <input type="text" name="sku" id="sku" data-validate='{"required":true}'>
+    <form id="addProduct" action="<?= $block->getUrl('victoriamod/index/action')?>" method="get" data-mage-init='{"validation":{}}'>
+        <div class="<?=$block->getData("input_class_sku"); ?>" data-bind="scope: 'skuAutocomplete'">
+        <!-- ko template: getTemplate() --> <!-- /ko -->
         </div>
         <div class="<?= $block->setVisibleElement(); ?> ">
                 <label for="qty">Qty:</label>
                 <input type="number" name="qty" id="qty" value="<?=$block->getQtyDefault() ?>"
                        data-validate='{"required":true, "min":1}'>
         </div>
-
-        <div><?=$block->getChildHtml('amasty_victoriamod.timer'); ?></div>
-        <button class="<?=$block->getData("input_class_submit"); ?>">Submit</button>
     </form>
+    <div class="<?=$block->getData('timer_class') ?>">
+        <?=$block->getChildHtml('amasty_victoriamod.timer'); ?>
+    </div>
+    <div>
+        <button form="addProduct" class="<?=$block->getData("input_class_submit"); ?>">Submit</button>
+    </div>
 
 </div>
+
+
+<script type="text/x-magento-init">
+    {
+    "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "skuAutocomplete": {
+                        "component": "Amasty_VictoriaModule/js/skuAutocomplete",
+                        "template": "Amasty_VictoriaModule/skuAutocomplete"
+                    }
+                }
+            }
+        }
+    }
+</script>
