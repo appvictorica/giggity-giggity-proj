@@ -73,11 +73,15 @@ class Action extends MagentoAction
                 }
                 $quote->addProduct($product, $qty);
                 $quote->save();
+
+                $this->_eventManager->dispatch(
+                    'give_promo_product',
+                    ['product' => $product]
+                );
             } else {
                 $this->messageManager->addErrorMessage('Product with sku ' . $sku . ' is not simple ');
             }
-        } catch (\Exception $exception)
-        {
+        } catch (\Exception $exception) {
             $this->messageManager->addErrorMessage($exception->getMessage());
         }
 

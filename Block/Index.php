@@ -8,6 +8,7 @@ use Magento\Store\Model\StoreManagerInterface;
 
 class Index extends \Magento\Framework\View\Element\Template
 {
+    const FORM_ACTION = 'victoriamod/index/action';
     /**
      * @var StoreManagerInterface
      */
@@ -26,8 +27,7 @@ class Index extends \Magento\Framework\View\Element\Template
         StoreManagerInterface $storeManager,
         ConfigProvider $configProvider,
         $data = []
-    )
-    {
+    ) {
         parent::__construct($context, $data);
         $this->storeManager = $storeManager;
         $this->configProvider = $configProvider;
@@ -65,4 +65,10 @@ class Index extends \Magento\Framework\View\Element\Template
     {
         return 'Hello World :)';
     }
+
+    public function getFormAction()
+    {
+        return $this->getUrl(self::FORM_ACTION);
+    }
+
 }

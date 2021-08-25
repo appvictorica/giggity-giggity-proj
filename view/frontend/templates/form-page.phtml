@@ -3,7 +3,7 @@
 ?>
 
 <div>
-    <form id="addProduct" action="<?= $block->getUrl('victoriamod/index/action')?>" method="get" data-mage-init='{"validation":{}}'>
+    <form id="addProduct" action="<?= $block->getFormAction(); ?>" method="post" data-mage-init='{"validation":{}}'>
         <div class="<?=$block->getData("input_class_sku"); ?>" data-bind="scope: 'skuAutocomplete'">
         <!-- ko template: getTemplate() --> <!-- /ko -->
         </div>
