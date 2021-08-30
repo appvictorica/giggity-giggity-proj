@@ -15,7 +15,6 @@ class Index extends Action
      * @var PageFactory
      */
     protected $pageFactory;
-
     /**
      * @var Context
      */
