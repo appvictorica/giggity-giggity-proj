@@ -12,6 +12,10 @@
                 <qty_hide>1</qty_hide>
                 <qty_default>1</qty_default>
             </qty_general>
+            <template_general>
+                <email_to>user@magento.com</email_to>
+                <select_template>amasty_victoriamodule_blacklist_template</select_template>
+            </template_general>
         </victoriamod_config>
     </default>
 </config>

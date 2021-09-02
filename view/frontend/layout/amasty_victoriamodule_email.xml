@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+      label="Email BlackList Qty" design_abstraction="custom">
+<body>
+    <block class="Amasty\VictoriaModule\Block\Email\BlackList"
+           name="amasty.victoriamodule.blacklist"
+           template="Amasty_VictoriaModule::email/blacklist.phtml"/>
+</body>
+
+</page>
+

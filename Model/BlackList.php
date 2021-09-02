@@ -8,6 +8,7 @@ use Magento\Framework\Model\AbstractModel;
  * Class BlackList
  * @method string setSku(string $sku)
  * @method int setQty(int $qty)
+ * @method string setEmailBody(string $emailBody)
  *
  */
 class BlackList extends AbstractModel
@@ -18,4 +19,5 @@ class BlackList extends AbstractModel
             ResourceModel\BlackList::class
         );
     }
+
 }

@@ -43,6 +43,26 @@
                     </depends>
                 </field>
             </group>
+
+            <group id="template_general" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Template Configuration</label>
+                <field id="email_to" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email To</label>
+                    <validate>validate-email</validate>
+                </field>
+
+                <field id="select_template" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Template ID</label>
+                </field>
+            </group>
+
+            <group id="cronetab_settings" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Cron Settings</label>
+                <field id="generate_cron_schedule" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Generate Cron Schedule</label>
+                </field>
+
+            </group>
         </section>
     </system>
 </config>

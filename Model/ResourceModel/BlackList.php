@@ -13,4 +13,5 @@ class BlackList extends AbstractDb
            'blacklist_id'
        );
     }
+
 }

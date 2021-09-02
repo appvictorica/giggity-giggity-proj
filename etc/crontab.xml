@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Amasty_VictoriaModule:etc/crontab.xsd">
+    <group id="victoriamodule_email">
+        <job name="amasty_victoriamodule_blacklist_notification"
+             instance="Amasty\VictoriaModule\Cron\SendBlacklistEmail" method="execute">
+            <schedule>*/5 * * * *</schedule>
+            <config_path>amasty_victoriamod\cronetab_settings\generate_cron_schedule</config_path>
+        </job>
+    </group>
+</config>

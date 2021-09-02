@@ -1,0 +1,18 @@
+<!--@subject Amasty VictoriaModule BlackList Notification @-->
+<!--@vars
+{
+"var sku":"Sku",
+"var qty":"Qty"
+}
+@-->
+{{template config_path="design/email/header_template"}}
+<p>{{trans "Product Sku: %sku" sku=$sku}}</p>
+<p>{{trans "Product Qty: %qty" qty=$qty}}</p>
+
+{{layout
+handle="amasty_victoriamodule_email"
+sku=$sku
+qty=$qty
+}}
+
+{{template config_path="design/email/footer_template"}}

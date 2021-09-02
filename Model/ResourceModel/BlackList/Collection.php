@@ -2,7 +2,6 @@
 
 namespace Amasty\VictoriaModule\Model\ResourceModel\BlackList;
 
-
 use Amasty\VictoriaModule\Model\BlackList;
 use Amasty\VictoriaModule\Model\ResourceModel\BlackList as BlackListResource;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;

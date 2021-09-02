@@ -121,10 +121,12 @@ class Action extends MagentoAction
             } else {
                 $collectionBlacklist = $this->collectionFactory->create();
                 $blackList = $collectionBlacklist->addFieldToFilter('sku', $sku)->getFirstItem();
+
                 if ($blackList) {
                     $maxQty = $blackList->getQty();
                     if ($qty > $maxQty) {
                         $qty = $maxQty;
+                        $this->messageManager->addNoticeMessage(__('Product limit exceeded. Added product = %1', $qty));
                     }
                 }
             }

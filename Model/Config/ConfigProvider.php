@@ -8,11 +8,14 @@ class ConfigProvider extends ConfigProviderAbstract
 {
     const QTY_GROUP = 'qty_general/';
     const GENERAL_GROUP = 'general/';
+    const TEMPLATE_GROUP = 'template_general/';
 
     const IS_ENABLED = 'module_enabled';
     const GREETING_TEXT = 'greeting_text';
     const IS_SHOW_QTY_FIELD = 'qty_hide';
     const QTY_DEFAULT = 'qty_default';
+    const EMAIL_TEXT = 'email_to';
+    const TEMPLATE_SELECT = 'select_template';
 
     protected $pathPrefix = 'victoriamod_config/';
 
@@ -46,5 +49,21 @@ class ConfigProvider extends ConfigProviderAbstract
     public function getQtyDefault($storeId)
     {
         return $this->getValue(self::QTY_GROUP.self::QTY_DEFAULT, $storeId);
+    }
+
+    /**
+     * @param $storeId
+     */
+    public function getEmailTo($storeId)
+    {
+        return $this->getValue(self::TEMPLATE_GROUP.self::EMAIL_TEXT, $storeId);
+    }
+
+    /**
+     * @param $storeId
+     */
+    public function getTemplateName($storeId)
+    {
+        return $this->getValue(self::TEMPLATE_GROUP.self::TEMPLATE_SELECT, $storeId);
     }
 }
